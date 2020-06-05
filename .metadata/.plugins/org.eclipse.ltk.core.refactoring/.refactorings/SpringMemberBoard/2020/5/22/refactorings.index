@@ -1,0 +1,62 @@
+1590637636615	Copy package
+1590637640978	Delete element
+1590637645554	Copy package
+1590640959508	Delete element
+1590641047970	Delete elements
+1590641065550	Delete element
+1590641252642	Delete element
+1590641303097	Rename type 'MemberServiceImpl'
+1590642712300	Rename resource 'memberupdateform.jsp'
+1590643062725	Rename resource 'qna_board_list.jsp'
+1590643070801	Rename resource 'qna_board_modify.jsp'
+1590643081770	Rename resource 'qna_board_reply.jsp'
+1590643087442	Rename resource 'qna_board_view.jsp'
+1590643093211	Rename resource 'qna_board_write.jsp'
+1590643195294	Copy compilation units
+1590643212008	Rename type 'MemberController'
+1590643219781	Rename type 'MemberDAO'
+1590643226948	Rename type 'MemberService'
+1590643234675	Rename type 'MemberVO'
+1590643610820	Rename field 'memberDAO'
+1590643642932	Rename local variable 'memberVO'
+1590644730871	Rename local variable 'board'
+1590645287585	Rename local variable 'boarddao'
+1590645395135	Rename local variable 'boardlist'
+1590646667737	Rename field 'pr_ref'
+1590646673073	Rename field 'pr_lev'
+1590646682063	Rename field 'pr_seq'
+1590646709019	Rename method 'getPr_ref'
+1590646714038	Rename method 'setPr_ref'
+1590646723500	Rename method 'getPr_lev'
+1590646729319	Rename method 'setPr_lev'
+1590646741588	Rename method 'setPr_seq'
+1590646746159	Rename method 'getPr_seq'
+1590646906402	Rename field 'pe_ref'
+1590646913318	Rename field 'pe_lev'
+1590646919581	Rename field 'pe_seq'
+1590646931113	Rename method 'getPe_ref'
+1590646937624	Rename method 'setPe_ref'
+1590646946425	Rename method 'getPe_lev'
+1590646953745	Rename method 'setPe_lev'
+1590646958556	Rename method 'getPe_seq'
+1590646964574	Rename method 'setPe_seq'
+1590648230702	Rename local variable 'board_list_sql'
+1590648643235	Rename method 'getBoardlist'
+1590651941600	Rename local variable 'board'
+1590651946701	Rename local variable 'ㅠoardVO'
+1590654891096	Rename local variable 'insertSql'
+1590654896467	Rename local variable 'maxSql'
+1590661841418	Rename local variable 'num'
+1590661955462	Rename local variable 'num'
+1590661978301	Rename local variable 'vo'
+1590719717484	Delete elements
+1590736728254	Copy compilation unit
+1590736899464	Copy package
+1590736905486	Copy package
+1590736940436	Copy folders
+1590738039730	Copy compilation unit
+1590738049452	Copy packages
+1590738099808	Copy folders
+1590738259918	Copy compilation unit
+1590738265557	Copy packages
+1590738494857	Copy folders

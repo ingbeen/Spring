@@ -1,0 +1,52 @@
+package com.spring.springmybatis;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class MybatisController {
+
+	@Autowired
+	private MemberServiceImpl memberService;
+	
+	// 시작 메인화면
+	@RequestMapping("list.do")
+	public ModelAndView main(Model model) {
+		// view 화면인 main.jsp에 DB로부터 읽어온 데이터를 보여준다
+		ModelAndView result = new ModelAndView();
+		
+		// addObject view에 넘어가는 데이터
+		List<MemberVO> memberList = memberService.getMembers();
+		result.addObject("memberList", memberList);
+		result.setViewName("list");
+		return result;
+	}
+	
+	// insert 버튼 클릭시 값을 가져와서 list.jsp로 화면전환을 해준다
+	@RequestMapping("insert.do")
+	public ModelAndView insert(MemberVO member) {
+		memberService.insertMember(member);
+		/*
+		// HashMap 시작
+		HashMap<String, String> map = new HashMap<String, String>();
+		mpa.put("id", member.getId());
+		mpa.put("name", member.getName());
+		mpa.put("email", member.getId());
+		mpa.put("phone", member.getId());
+		memberService.insertMember2(map);
+		// HashMap 끝
+		*/
+		
+		ModelAndView result = new ModelAndView();
+		List<MemberVO> memberList = memberService.getMembers();
+		result.addObject("memberList", memberList);
+		result.setViewName("list");
+		return result;
+	}
+}

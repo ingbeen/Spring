@@ -1,0 +1,12 @@
+package com.spring.mapper;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.spring.memberboard.board.BoardVO;
+import com.spring.memberboard.member.MemberVO;
+
+public interface BoardMapper {
+	int getListCount();
+	ArrayList<BoardVO> getBoardList(HashMap<String, String> startEndRow);
+}

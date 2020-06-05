@@ -1,0 +1,51 @@
+package com.spring.springajax2;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+// @ToString, @EqualsAndHashCode, @Getter, @Setter, @RequiredArgsConstructor
+// @RequiredArgsConstructor : final이나 @NonNull인 필드 값만 파라미터로 받는 생성자를 만듬
+// lombok 라이브러리로 인해 위의 어노테이션이 자동 생성된다
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class PeopleVO {
+	private String id;
+	private String name;
+	private String job;
+	private String address;
+	private String bloodtype;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getJob() {
+		return job;
+	}
+	public void setJob(String job) {
+		this.job = job;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getBloodtype() {
+		return bloodtype;
+	}
+	public void setBloodtype(String bloodtype) {
+		this.bloodtype = bloodtype;
+	}
+
+}

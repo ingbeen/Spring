@@ -1,0 +1,14 @@
+package com.spring.mapper;
+
+import java.util.ArrayList;
+
+import com.spring.sungjuk2.SungjukVO;
+
+
+public interface MemberMapper {
+	ArrayList<SungjukVO> getMemberlist();
+	SungjukVO selectMember(MemberVO memeberVO);
+	int insertMember(SungjukVO sungjukVO);
+	int updateMember(SungjukVO sungjukVO);
+	int deleteMember(SungjukVO sungjukVO);
+}

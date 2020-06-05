@@ -1,0 +1,14 @@
+package com.spring.mapper;
+
+import java.util.ArrayList;
+
+import com.spring.memberboard.member.MemberVO;
+
+public interface BoardMapper {
+	int getListCount();
+	ArrayList<MemberVO> getBoardList();
+	MemberVO selectMember(HashMap<String, Object> map);
+	int insertMember(MemberVO memberVO);
+	int updateMember(MemberVO memberVO);
+	int deleteMember(MemberVO memberVO);
+}

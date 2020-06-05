@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.mapper.BoardMapper">
+
+	<!-- 글의 개수 구하기 -->
+	<select id="getListCount" resultType="int">
+		select count(*)
+		from smemberboard2
+	</select>
+
+	<!-- 글 목록 보기 -->
+	<select id="getBoardList" parameterType="HashMap" resultType="BoardVO">
+		<![CDATA[
+		select *
+		from (select row_number() over (order by re_ref desc, re_seq asc) rnum, board.*
+			from smemberboard2 board)
+		where rnum >= #{startrow} and rnum <= #{endrow}
+		]]>
+	</select>
+
+	<!-- 가장 높은 글번호 구하기 -->
+	<select id="getMaxNumber" resultType="int">
+		select max(num)
+		from smemberboard2
+	</select>
+
+	<!-- 새로운 글 작성 -->
+	<insert id="insertBoard" parameterType="BoardVO">
+		insert into smemberboard2
+		values (#{num}, #{id}, #{subject}, #{content}, #{org_file, jdbcType=VARCHAR},
+		#{up_file, jdbcType=VARCHAR}, #{re_ref}, 0, 0, 0, sysdate)
+	</insert>
+
+	<!-- 글 상세정보 -->
+	<select id="getDetail" parameterType="BoardVO" resultType="BoardVO">
+		select * from smemberboard2 where num = #{num}
+	</select>
+	
+	<!-- 조회수 업데이트 -->
+	<update id="setReadCountUpdate" parameterType="BoardVO">
+		update smemberboard2 set readcount = readcount+1 where num = #{num}
+	</update>
+	
+	<!-- 답글에 대한 공간 확보 -->
+	<update id="setRe_seqUpdate" parameterType="BoardVO">
+		<![CDATA[
+		update smemberboard2
+		set re_seq = re_seq + 1
+		where re_ref = #{re_ref} and re_seq > #{re_seq}
+		]]>
+	</update>
+	
+	<!-- 답글 작성 -->
+	<insert id="boardReply" parameterType="BoardVO">
+		insert into
+		smemberboard2 (num, id, subject, content, re_ref, re_lev, re_seq, readcount, boarddate)
+		values(#{num}, #{id}, #{subject}, #{content}, #{re_ref}, #{re_lev}, #{re_seq}, 0, sysdate)
+	</insert>
+	
+	<!-- 글 수정 -->
+	<update id="boardModify" parameterType="BoardVO">
+		update smemberboard2 set subject = #{subject}, content = #{content} where num = #{num}
+	</update>
+	
+	<delete id="boardDelete" parameterType="BoardVO">
+		delete from smemberboard2 where num = #{num}
+	</delete>
+
+</mapper>

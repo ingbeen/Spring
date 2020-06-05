@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.mapper.MemberMapper">
+	<resultMap type="MemberVO" id="MemberResultMap">
+		<result property="id" column="id"/>
+		<result property="password" column="password"/>
+		<result property="name" column="name"/>
+		<result property="age" column="age"/>
+		<result property="gender" column="gender"/>
+		<result property="email" column="email"/>
+	</resultMap>
+	
+	<!-- 멤버리스트 조회 -->
+	<select id="getMemberlist" resultMap="MemberResultMap">
+		select * from smember order by id
+	</select>
+	
+	<!-- 멤버정보 상세조회 -->
+	<select id="selectSungjuk"  parameterType="String" resultMap="MemberResultMap">
+		select * from smember where id = #{id}
+	</select>
+	
+	<!-- 멤버정보 입력 -->
+	<insert id="insertSungjuk" parameterType="MemberVO">
+		insert into smember values(#{id}, #{password}, #{name}, #{age}, #{gender}, #{email})
+	</insert>
+	
+	<!-- 성적정보 수정 -->
+	<update id="updateSungjuk" parameterType="MemberVO">
+		update smember set name=#{name}, age=#{age}, gender=#{gender}, email=#{email} where id=#{id}
+	</update>
+	
+	<!-- 성적정보 삭제 -->
+	<delete id="deleteSungjuk" parameterType="String">
+		delete from smember where id = #{id}
+	</delete>
+	
+</mapper>

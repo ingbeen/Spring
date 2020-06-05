@@ -1,0 +1,15 @@
+package com.spring.mapper;
+
+import java.util.ArrayList;
+
+import com.spring.sungjuk2.SungjukVO;
+
+
+public interface SungjukMapper {
+	ArrayList<SungjukVO> getSungjuks();
+	HashMap<String, String> getMember(String id);
+	int insertMember(SungjukVO member);
+	void updateMember(SungjukVO member);
+	void deleteMember(String id);
+	int getCount();
+}

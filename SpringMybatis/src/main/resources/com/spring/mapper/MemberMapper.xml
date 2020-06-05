@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 
+* hashmap 사용예
+예) select sum(sal) as sumsal avg(sal) as avgsal 
+from emp 
+group by deptno
+를 하고자 하면 컬럼명과 VO객체의 필드명이 일치하지 않기 때문에 haspmap을 사용한다
+<resultMap type="java.util.HaspMap" id="hashmapVO">
+	<result property="sumsal" column="sumsal"/>
+	<result property="avgsal" column="avgsal"/>
+
+
+* 파라미터
+id = #{id, javaType=String} 는
+id = #{id} 로 표현 가능한다
+단, 기본이 String이기 때문에 그 외 타입은 명시를 해줘야 한다
+기준의 표현은  javaType=String 혹은 jdbcType=VARCHAR
+
+#,$의 차이는 홈따옴표('')의 유무이다
+#{} 는 기본 문자열 처리 'mbc'
+${} 는 mbc
+보통은 #을 쓰지만, $를 쓰는 경우는 값 자체를 문자열이 아닌 그대로 쓰고 싶을때이다
+예를 들면
+select * from ${value} order by name 를 하고 싶으면
+테이블명에는 ''가 안들어가므로
+#이 아닌 $를 사용해야 된다
+
+parameterType : sql문에 대입될 값 타입(input데이터)
+
+resultMap : sql문이 반환될 값의 정의 된 타입(output데이터)
+resultType : sql문이 반환될 값의 기본타입(output데이터)
+-->
+
+<!-- namespace="com.spring.mapper.MemberMapper는 MemberMapper인터페이스 (MemberMapper.class)의 이름을 사용한다 -->
+<mapper namespace="com.spring.mapper.MemberMapper">
+	<!-- HashMap 이용시 추가부분
+	property hashmap의 key, column은 데이터베이스 테이블 컬럼명  -->
+	<resultMap type="java.util.HashMap" id="hashmapVO">
+		<result property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="email" column="email"/>
+		<result property="phone" column="phone"/>
+	</resultMap> <!-- 끝 -->
+	
+	<!-- property MemberVO의 필드명, column은 데이터베이스 테이블 컬럼명 
+	<property name="typeAliasesPackage" value="com.spring.springmybatis" />
+	위의 문구가  root-context.xml에 선언되어 있기 때문에
+	<resultMap type="com.spring.springmybatis.MemberVO" id="MemberResultMap">
+	type을 위처럼 안해도 됨 -->
+	<resultMap type="MemberVO" id="MemberResultMap">
+		<result property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="email" column="email"/>
+		<result property="phone" column="phone"/>
+	</resultMap>
+	
+	<!-- id는 MemberMapper.java에 동일하게 사용해야된다 
+	resultMap은 MemberMapper.java의 해당 id와 일치하는  메소드와 리턴값이 같아야 한다 -->	
+	<select id="getMembers" resultMap="MemberResultMap">
+		select * from tab_mybatis order by id
+	</select>
+	
+	<!-- 
+	<select id="getMembers" parameterType="String" resultMap="MemberResultMap">
+		select * from ${value} order by name
+	</select>
+	
+	<select id="getMember" parameterType="String" resultMap="MemberResultMap">
+		select * from tab_mybatis where id = #{id, javaType=String}
+	</select>
+	-->
+	
+	<!-- parameterType은   MemberMapper.java의 해당 id와 일치하는  메소드의 파라미터 타입과 같아야 한다-->
+	<select id="getMember"  parameterType="String" resultMap="hashmapVO">
+		select * from tab_mybatis where id = #{id, javaType=String}
+	</select>
+	
+	<!-- parameterType에는 구문에 전달될 파라미터의 패키지 경로를 포함한 전체 클래스명이나 별칭이 들어간다 
+	root-context에서 아래와 같이 typeAliasesPackage를 설정하면 패키지 경로 생략 가능
+	<property name="typeAliasesPackage" value="com.spring.springmybatis" /> 추가시
+	<insert id="insertMember" parameterType="MemberVO">로 표현 가능
+	-->
+	<insert id="insertMember" parameterType="com.spring.springmybatis.MemberVO">
+		insert into tab_mybatis values(#{id, javaType=String}, #{name, jdbcType=VARCHAR}, #{email}, #{phone})
+	</insert>
+	
+	<!-- HashMap의 key과 아래의 #{?}은 같아야 한다 -->
+	<insert id="insertMember2" parameterType="HashMap">
+		insert into tab_mybatis values(#{id, javaType=String}, #{name, jdbcType=VARCHAR}, #{email}, #{phone})
+	</insert>
+	
+	<!-- root-context에서 아래와 같이 typeAliasesPackage를 설정하면 패키지 경로 생략 가능 -->
+	<update id="updateMember" parameterType="MemberVO">
+		update tab_mybatis set name=#{name}, email=#{email}, phone=#{phone} where id=#{id}
+	</update>
+	
+	<delete id="deleteMember" parameterType="String">
+		delete from tab_mybatis where id=#{id}
+	</delete>
+	
+	<!-- parameterType은 반환하는 컬럼의 갯수가 여러개일때는 VO나 MAP을 이용하고
+	한개일때는 타입을 따로 설정해도 된다 -->
+	<select id="getCount" resultType="int">
+		select count(*) from tab_mybatis
+	</select>
+	
+</mapper>

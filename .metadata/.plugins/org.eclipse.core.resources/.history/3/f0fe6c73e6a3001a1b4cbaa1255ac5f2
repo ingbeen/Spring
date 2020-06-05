@@ -1,0 +1,14 @@
+package com.spring.mapper;
+
+import java.util.ArrayList;
+
+import com.spring.sungjuk2.SungjukVO;
+
+
+public interface SungjukMapper {
+	ArrayList<SungjukVO> getSungjuks();
+	SungjukVO getSungjuk(String id);
+	int insertSungjuk(SungjukVO member);
+	int updateSungjuk(SungjukVO member);
+	int deleteSungjuk(String id);
+}

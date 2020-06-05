@@ -1,0 +1,14 @@
+1590569723878	Delete element
+1590569832733	Delete element
+1590570124533	Rename type 'MemberVO'
+1590570135066	Rename type 'MemberDAO'
+1590570368630	Rename local variable 'member_list'
+1590573630155	Rename type 'MemberServiceImpl'
+1590574470720	Rename local variable 'sungjuk_list'
+1590576996117	Rename resource 'joinForm.jsp'
+1590579264858	Rename resource 'sungjuklist.jsp'
+1590579388261	Copy file
+1590579849541	Rename method 'selectMember'
+1590579864516	Rename method 'updateMember'
+1590579878033	Rename method 'deleteMember'
+1590580330356	Copy file

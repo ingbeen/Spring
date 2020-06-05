@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+create table people(
+  id varchar2(10) primary key,
+  name varchar2(20),
+  job varchar2(20),
+  address varchar2(40),
+  bloodtype varchar2(2)
+);
+-->
+<mapper namespace="com.spring.mapper.PeopleMapper">
+
+	<select id="getPeopleList" resultType="PeopleVO">
+		SELECT * FROM people order by id
+	</select>
+
+	<insert id="insertPeople" parameterType="PeopleVO">
+		INSERT INTO people VALUES 
+			(#{id},#{name},#{job},#{address},#{bloodtype})
+	</insert>
+
+	<select id="getPeople" parameterType="String" resultType="PeopleVO">
+		SELECT * FROM people WHERE id=#{id, javaType=String}
+	</select>
+
+	<update id="updatePeople" parameterType="PeopleVO">
+		UPDATE people SET name=#{name}, job=#{job}, address=#{address}, 
+			bloodtype=#{bloodtype} WHERE id=#{id}
+	</update>
+ 	
+	<delete id="deletePeople" parameterType="String">
+		DELETE FROM people WHERE id=#{id}
+	</delete>
+</mapper>

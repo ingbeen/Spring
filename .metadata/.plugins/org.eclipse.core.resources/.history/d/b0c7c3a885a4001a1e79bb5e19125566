@@ -1,0 +1,7 @@
+package com.spring.mapper;
+
+import com.spring.member2.MemberVO;
+
+public interface MemberMapper {
+	MemberVO getMemberlist();
+}
