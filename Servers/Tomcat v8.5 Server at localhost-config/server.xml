@@ -154,7 +154,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 		<Context docBase="C:/Project156/upload" path="/springfileupload/upload" reloadable="true"/>
       	<Context docBase="C:/Project156/upload" path="/memberboard2/upload" reloadable="true"/> 
-      <Context docBase="SpringEmail" path="/springemail" reloadable="true" source="org.eclipse.jst.jee.server:SpringEmail"/></Host>
+      <Context docBase="TestMap" path="/testmap" reloadable="true" source="org.eclipse.jst.jee.server:TestMap"/></Host>
     </Engine>
   </Service>
 </Server>
