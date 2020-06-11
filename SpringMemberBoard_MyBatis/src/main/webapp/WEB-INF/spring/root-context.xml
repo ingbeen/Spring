@@ -7,7 +7,7 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
-	<!-- 추가 시작 !!!!!!!!!하단의 namespaces탭에서 mybatis 체크 하기!!!!!!!! -->
+	<!-- Connection Pool 시작 -->
 	
 	<!-- Orcle 연결에 사용될 설정값 -->
 	<bean id = "dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
@@ -17,6 +17,21 @@
 		<property name="password" value="123456" />
 	</bean>
 	
+	<!-- Connection Pool 끝 -->
+	
+	
+	<!-- Mybatis 시작 -->
+	
+	<!-- 
+	         !!!! 주의사항  !!!!
+	1.
+	하단의 namespaces탭에서 mybatis 체크 하기 
+	
+	2.
+	<property name="typeAliasesPackage" value="com.spring.memberboard" /> 
+	value값 변경(해당 프로젝트경로)
+	-->
+	
 	<!-- sqlSession 객체 생성(sql구문을 위한) -->
 	<!-- id="sqlSessionFactory"을 다루기 위해  sqlSession이름을 사용할 것임 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -25,22 +40,11 @@
 		
 		<!-- name="typeAliasesPackage" mybatis에서 resultType과 parameterType 사용시 bean 객체를
 		사용하려면 패키지 경로 및 bean 클래스명까지 입력해야 한자 하지만  alias 처리를 해주면 bean 클래스명만 입력하면 된다 -->
-		
-		
-		
-		<!-- !!!!!!!!!!!!!!!!!!!!!!! -->
-		
 		<!-- value값 변경 -->
 		<property name="typeAliasesPackage" value="com.spring.memberboard" />
 		
-		<!-- !!!!!!!!!!!!!!!!!!!!!!! -->
-		
-		
-		
 		<!-- 
 		<property name="mapperLocations" value="classpath*:/com/spirng/mapper/MemberMapper.xml" />
-		 -->
-	 	<!-- 
 	 	mapper관련 xml문서 (ex:MemberMapper.xml)의 위치 지정
 	 	데이터베이스 연결시 sql문구를 xml문서로 만들것인데 그것의 위치를 지정해준것 
 	 	/com/spring/mapper/**/*.xml의 뜻은 mapper폴더를 포함한 하위폴더까지의 xml파일을 연결한다 
@@ -56,5 +60,5 @@
 	<!-- mapper 관련 인터페이스(ex.MamberMapper.java)를 찾기 위한 패키지 경로 설정함 -->
 	<mybatis-spring:scan base-package="com.spring.mapper"/>
 	
-	<!-- 추가 끝 하단의 namespaces탭에서 mybatis 체크 하기!!!!!!!! -->
+	<!-- Mybatis 끝 -->
 </beans>

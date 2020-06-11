@@ -178,13 +178,6 @@
 		    <version>12.1.0.2</version>
 		</dependency>
 		
-		<!-- Jackson JSON Mapper  springframework 3.X.X에 사용
-	    <dependency>
-	        <groupId>org.codehaus.jackson</groupId>
-	        <artifactId>jackson-mapper-asl</artifactId>
-	        <version>1.9.13</version>
-	    </dependency>
-	    -->
 	    <!-- Jackson JSON Mapper 시작 -->
 	    <!-- jackson-core springframework 5.X.X에 사용 -->
 		<dependency> 
@@ -192,6 +185,13 @@
 			<artifactId>jackson-databind</artifactId> 
 			<version>2.9.6</version> 
 		</dependency>
+		<!-- Jackson JSON Mapper springframework 3.X.X에 사용
+	    <dependency>
+	        <groupId>org.codehaus.jackson</groupId>
+	        <artifactId>jackson-mapper-asl</artifactId>
+	        <version>1.9.13</version>
+	    </dependency>
+	    -->
 		<!-- Jackson JSON Mapper 끝 -->
 		
 		<!-- lombok다운로드 : https://projectlombok.org/ -->

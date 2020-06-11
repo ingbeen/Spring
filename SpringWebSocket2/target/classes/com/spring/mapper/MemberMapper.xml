@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 
+CREATE TABLE TEST_MEMBER (
+    ID VARCHAR2(20 BYTE), 
+	PASSWORD VARCHAR2(20 BYTE), 
+	NAME VARCHAR2(20 BYTE), 
+	PRIMARY KEY (ID)
+);
+ -->	
+<mapper namespace="com.spring.mapper.MemberMapper">
+	
+	<insert id="insertMember" parameterType="MemberVO">
+		INSERT INTO test_member VALUES
+				(#{id, javaType=String}, #{password}, #{name, jdbcType=VARCHAR})
+	</insert>
+	
+	<select id="userCheckMember" parameterType="String" resultType="int">
+		select count(*) from test_member where id = #{id}
+	</select>
+	
+	<select id="pickNameMember" parameterType="String" resultType="String">
+		select name from test_member where id = #{id}
+	</select>
+
+</mapper>

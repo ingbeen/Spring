@@ -13,14 +13,14 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="WevSocket error"/>
+			<item value="atter"/>
+			<item value="showMarkers"/>
+			<item value="map_wrap"/>
 			<item value="springajax"/>
 			<item value="springajax1"/>
 			<item value="update_form"/>
 			<item value="selectData"/>
-			<item value="main"/>
-			<item value="appServlet"/>
-			<item value="글 개수"/>
-			<item value="mem"/>
 		</list>
 		<list key="replacehistory">
 		</list>

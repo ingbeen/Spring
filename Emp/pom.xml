@@ -8,12 +8,12 @@
 	<name>Emp</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
-	<properties> <!-- 수정 시작 -->
+	<properties> <!-- 기본 버전 수정 시작 -->
 		<java-version>1.8</java-version>
 		<org.springframework-version>5.0.7.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
-	</properties> <!-- 수정 끝 -->
+	</properties> <!-- 기본 버전 수정 끝 -->
 	<repositories> <!-- Oracle 시작 -->
 		<repository>
 			<id>oracle</id>
@@ -98,12 +98,12 @@
 		</dependency>
 
 		<!-- Servlet -->
-		<dependency> <!-- 수정 시작 -->
+		<dependency> <!-- 기본 버전 수정 시작 -->
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 			<scope>provided</scope>
-		</dependency> <!-- 수정 끝 -->
+		</dependency> <!-- 기본 버전 수정 끝 -->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
@@ -146,7 +146,7 @@
 					<downloadJavadocs>true</downloadJavadocs>
 				</configuration>
 			</plugin>
-			<plugin> <!-- 수정 시작 -->
+			<plugin> <!-- 기본 버전 수정 시작 -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5.1</version>
@@ -157,7 +157,7 @@
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true</showDeprecation>
 				</configuration>
-			</plugin> <!-- 수정 끝 -->
+			</plugin> <!-- 기본 버전 수정 끝 -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>

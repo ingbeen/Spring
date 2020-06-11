@@ -111,6 +111,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Project156\Spring_Source\SpringImport"/>
+			<item value="C:\Project156\Spring_Source\SpringWebSocket2"/>
+			<item value="C:\Project156\Spring_Source\SpringJSoup2"/>
 			<item value="C:\Project156\Spring_Source\SpringAjax1"/>
 			<item value="C:\Project156\Spring_Source\SpringMybatisMB2"/>
 			<item value="C:\Project156\Spring_Source\SpringMemberBoard2"/>

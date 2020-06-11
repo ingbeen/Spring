@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.mapper.CommentMapper">
+	<select id="commentCount" resultType="int">
+		SELECT count(*) FROM table_comment
+	</select>
+
+	<select id="commentList" parameterType="int" resultType="CommentVO">
+		SELECT * FROM table_comment where bno = #{bno} order by cno desc
+	</select>
+	
+	<insert id="commentInsert" parameterType="CommentVO" >
+		<selectKey keyProperty="cno" order="BEFORE" resultType="int">
+			select nvl(max(cno), 0) + 1 from table_comment
+		</selectKey>
+		INSERT INTO table_comment VALUES 
+			(#{cno}, #{bno}, #{content}, #{writer}, sysdate)
+	</insert>
+
+	<update id="commentUpdate" parameterType="CommentVO">
+		update table_comment set content = #{content} where cno = #{cno}
+	</update>
+	
+	<delete id="commentDelete" parameterType="int">
+		DELETE FROM table_comment WHERE cno = #{cno}
+	</delete>
+</mapper>

@@ -9,3 +9,37 @@
 6월 02, 2020 19:39:03.29 [13912:12796:0602/193903.289:ERROR:socket_stream.cc(218)] Closing stream with result -2
 6월 02, 2020 19:39:04.46 [13912:12796:0602/193904.459:ERROR:socket_stream.cc(218)] Closing stream with result -2
 6월 02, 2020 20:40:33.55 [13912:12796:0602/204033.557:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+
+6월 09, 2020 15:35:37.95 NEW SESSION
+6월 09, 2020 15:35:37.95 [21012:18648:0609/153537.951:ERROR:device_event_log_impl.cc(208)] [15:35:37.951] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 15:37:12.50 [7328:1080:0609/153712.508:ERROR:device_event_log_impl.cc(208)] [15:37:12.509] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 15:41:19.32 [21480:844:0609/154119.326:ERROR:device_event_log_impl.cc(208)] [15:41:19.325] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 15:49:03.04 [672:14296:0609/154903.045:ERROR:device_event_log_impl.cc(208)] [15:49:03.045] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 15:51:20.23 [21260:16632:0609/155120.235:ERROR:device_event_log_impl.cc(208)] [15:51:20.235] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 15:54:56.79 [6708:19696:0609/155456.797:ERROR:device_event_log_impl.cc(208)] [15:54:56.797] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 15:56:48.20 [7316:20768:0609/155648.200:ERROR:device_event_log_impl.cc(208)] [15:56:48.200] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 16:03:24.53 [14896:6352:0609/160324.532:ERROR:device_event_log_impl.cc(208)] [16:03:24.532] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+
+6월 09, 2020 16:06:04.59 NEW SESSION
+6월 09, 2020 16:06:04.59 [11980:10764:0609/160604.591:ERROR:device_event_log_impl.cc(208)] [16:06:04.590] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 16:08:26.21 [19672:22216:0609/160826.213:ERROR:device_event_log_impl.cc(208)] [16:08:26.213] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 16:09:36.02 [15748:19684:0609/160936.024:ERROR:device_event_log_impl.cc(208)] [16:09:36.024] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 16:10:07.55 [15116:17656:0609/161007.551:ERROR:device_event_log_impl.cc(208)] [16:10:07.551] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 16:11:39.14 [22504:17312:0609/161139.143:ERROR:device_event_log_impl.cc(208)] [16:11:39.142] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 17:25:36.41 [22504:19744:0609/172536.409:ERROR:socket_stream.cc(218)] Closing stream with result -2
+6월 09, 2020 17:25:37.66 [22504:19744:0609/172537.661:ERROR:socket_stream.cc(218)] Closing stream with result -2
+6월 09, 2020 18:09:52.57 [22504:19744:0609/180952.569:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+
+6월 09, 2020 18:22:59.12 NEW SESSION
+6월 09, 2020 18:22:59.12 [5508:6604:0609/182259.126:ERROR:device_event_log_impl.cc(208)] [18:22:59.126] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 18:45:39.87 [7280:9472:0609/184539.878:ERROR:device_event_log_impl.cc(208)] [18:45:39.878] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 18:48:55.78 [7324:16476:0609/184855.789:ERROR:device_event_log_impl.cc(208)] [18:48:55.789] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 18:52:28.21 [15004:15280:0609/185228.209:ERROR:device_event_log_impl.cc(208)] [18:52:28.209] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 09, 2020 19:56:59.85 [15004:2324:0609/195659.855:ERROR:socket_stream.cc(218)] Closing stream with result -2
+6월 09, 2020 19:57:00.83 [15004:2324:0609/195700.833:ERROR:socket_stream.cc(218)] Closing stream with result -2
+6월 09, 2020 20:56:23.80 [15004:2324:0609/205623.800:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+
+6월 10, 2020 12:08:35.27 NEW SESSION
+6월 10, 2020 12:08:35.27 [10860:2732:0610/120835.270:ERROR:device_event_log_impl.cc(208)] [12:08:35.270] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 10, 2020 12:10:48.16 [14184:8144:0610/121048.159:ERROR:device_event_log_impl.cc(208)] [12:10:48.160] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 10, 2020 12:12:59.15 [6728:16288:0610/121259.155:ERROR:device_event_log_impl.cc(208)] [12:12:59.154] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.

@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="SpringJSoup"/>
 <aop-project name="Emp"/>
-<aop-project name="SpringAjax"/>
-<aop-project name="SpringMybatisMB2"/>
 <aop-project name="SpringEmail"/>
-<aop-project name="SpringMemberBoard_MyBatis"/>
+<aop-project name="TestMap"/>
 <aop-project name="SpringFileUpload"/>
-<aop-project name="SpringMember2"/>
 <aop-project name="SpringAjax2"/>
 <aop-project name="Sungjuk"/>
 <aop-project name="SpringMemberBoard2"/>
 <aop-project name="HelloSpring3"/>
 <aop-project name="SpringMemberBoard"/>
 <aop-project name="InputForm"/>
+<aop-project name="SpringImport"/>
+<aop-project name="SpringWebSocket2"/>
+<aop-project name="SpringWebSocket"/>
+<aop-project name="HelloSpring2"/>
+<aop-project name="SpringJSoup"/>
+<aop-project name="SpringAjax"/>
+<aop-project name="SpringMybatisMB2"/>
+<aop-project name="SpringMybatisMB2Comment"/>
+<aop-project name="SpringMemberBoard_MyBatis"/>
+<aop-project name="SpringMember2"/>
 <aop-project name="Sungjuk2"/>
 <aop-project name="SpringMember"/>
 <aop-project name="SpringJSoup2"/>
 <aop-project name="HelloSpring"/>
 <aop-project name="SpringMybatis"/>
 <aop-project name="SpringAjax1"/>
-<aop-project name="HelloSpring2"/>
 </aop-reference-model>
